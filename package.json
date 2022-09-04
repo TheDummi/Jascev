@@ -1,7 +1,7 @@
 {
 	"name": "jascev",
 	"version": "1.0.0",
-	"description": "��#\u0000 \u0000J\u0000a\u0000s\u0000c\u0000e\u0000v\u0000\r\u0000 \u0000",
+	"description": "A JavaScript version of Python's Jishaku.",
 	"main": "main.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
