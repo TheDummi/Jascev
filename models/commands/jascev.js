@@ -50,7 +50,7 @@ module.exports = class JascevCommand extends Command {
 
         const noArgs = `${this.name} v${pkg.version}, ${Discord?.version ? `\`discord.js ${Discord?.version}\`, ` : ""}\`Node ${process.version}\` on \`${process.platform}\`\nModules were loaded <t:${Math.round(this.client.readyTimestamp / 1000)}:R>. Handlers were loaded <t:${Math.round(this.client.readyTimestamp / 1000)}:R>.\n\nThis bot is ${this.client.shard === null ? "not sharded" : `on shard ${this.client.shard}`} and can see ${(await this.client.guilds.fetch()).size} server(s) and ${(await this.client.users.cache.size)} user(s).\nMessage cache capped at {1000}, {presences intent is disabled}, {members intent is disabled}, and {message content intent is enabled}.\nAverage websocket latency: ${Math.round(this.client.ws.ping)}ms.`
 
-        const type = args.shift().toLowerCase();
+        const type = args?.shift()?.toLowerCase();
 
         const { flags, rest } = this.#flags(args.join(' '));
 
